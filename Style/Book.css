@@ -1,0 +1,150 @@
+/* =========================Basic========================= */
+:root{
+    --black-color:#1A1A1B;
+    --gold-color:#d4af37;
+    --white1-color:#F5F5F5;
+    --section-color:#2D2D2E;
+    --green-color:#28A745;
+    --red-color:#DC3545;
+}
+
+body{
+    font-family: "Readex Pro", sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* ========================= Hero Booking Modern ========================= */
+.hero-booking-modern {
+    height: 85vh; 
+    min-height: 500px;
+    background: url('../Image/cover-03.png') no-repeat center center; 
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.4) 100%);
+}
+
+.content-box {
+    position: relative;
+    z-index: 5;
+}
+
+.badge-premium {
+    background-color: var(--gold-color);
+    color: #000;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.hero-booking-modern h1 {
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.feature-item {
+    color: var(--gold-color);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.feature-item i {
+    margin-left: 5px;
+}
+
+.btn-book-now {
+    background-color: var(--gold-color);
+    color: #000;
+    padding: 15px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.4s;
+    display: inline-block;
+    border: 2px solid var(--gold-color);
+}
+
+.btn-book-now:hover {
+    background-color: transparent;
+    color: var(--gold-color);
+}
+
+/* تعديلات الموبايل */
+@media (max-width: 991px) {
+    .hero-booking-modern {
+        height: 70vh;
+        background-position: center left; 
+    }
+    .hero-overlay {
+        background: rgba(0,0,0,0.7); 
+    }
+    .content-box {
+        text-align: center !important;
+    }
+    .hero-features {
+        justify-content: center !important;
+    }
+}
+
+/* =================================book-form================================= */
+.booking-form{
+    margin: 80px auto;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.card{
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: var(--white1-color);
+    direction: rtl;
+}
+
+.card input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 35px;
+    width: 90%;
+    font-size: 16px;
+    color: var(--black-color);
+}
+
+.card select{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 90%;
+    font-size: 16px;
+    color: var(--black-color);
+}
+.card button{
+    padding: 10px 20px;
+}
+

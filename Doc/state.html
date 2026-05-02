@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Readex+Pro:wght@160..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Style/css/all.min.css">
+    <link rel="stylesheet" href="../Style/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Style/home.css">
+    <link rel="stylesheet" href="../Style/state.css">
+    <link rel="icon" href="../Image/logo-icon.jpeg" type="image/x-icon">
+</head>
+<body>
+    <!--  -->
+    <nav class="navbar navbar-dark sticky-top">
+        <div class="container-fluid">
+            <div class="icons">
+                <ul class="list-unstyled gap-3 ms-auto  d-flex ">
+                    <li><a class="text-light" href="./state.html"><i class="fa-solid fa-clock-rotate-left"></i></a></li>
+                    <li><a class="text-light" href="./Book.html"><i class="fa-regular fa-calendar-check"></i></a></li>
+                </ul>
+            </div>
+            <a href="../index.html"><img class="m-auto" src="../Image/main-logo.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link active" href="./state.html">جدول الحجوزات</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./Book.html">حجز موعد</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="../index.html">الرئيسيه</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </nav>
+    <section class="hero-state">
+        <div class="hero-overlay-state"></div>
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-8 text-center content-state" data-aos="zoom-in">
+                    <div class="status-icon mb-3">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                    </div>
+                    <h1 class="display-3 fw-bold text-white mb-3">جدول مواعيد الاسبوع</h1>
+                    <p class="lead mb-4 text-white-50">
+                        تابع حالة حجوزاتك لحظة بلحظة. دقة مواعيدنا هي سر تميزنا في "إبراهيم شيتوس".
+                    </p>
+                    <div class="state-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="pending-count">08</span>
+                            <span class="stat-label">حجوزات نشطة اليوم</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="schedule-section py-5 mt-5">
+        <div class="container">
+            <!-- 1. شريط التحكم في الوقت -->
+            <div class="time-controller d-flex align-items-center justify-content-between mb-5">
+                <button class="nav-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="date-display text-center">
+                    <h3 class="current-date mb-0">السبت، 2 مايو 2026</h3>
+                    <button class="btn-calendar"><i class="fa-regular fa-calendar-days"></i> اختار يوم آخر</button>
+                </div>
+                <button class="nav-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            </div>
+
+            <!-- 2. قائمة المواعيد (تم عرض 10 نماذج للمعاينة) -->
+            <div class="booking-list">
+
+                <!-- أولاً: المواعيد المنتهية (2 عملاء) -->
+                <div class="booking-card finished">
+                    <div class="card-id">#01</i></div>
+                    <div class="card-info">
+                        <h4 class="customer-name">إبراهيم محمود</h4>
+                        <span class="customer-phone">01122334455</span>
+                    </div>
+                    <div class="card-status">
+                        <span class="badge-status done">تم الانتهاء</span>
+                    </div>
+                </div>
+
+                <div class="booking-card finished">
+                    <div class="card-id">#02</i></div>
+                    <div class="card-info">
+                        <h4 class="customer-name">ياسر القاضي</h4>
+                        <span class="customer-phone">01099887766</span>
+                    </div>
+                    <div class="card-status">
+                        <span class="badge-status done">تم الانتهاء</span>
+                    </div>
+                </div>
+
+                <!-- ثانياً: المواعيد النشطة - الـ 5 اللي عليهم الدور (توهج ذهبي) -->
+                <div class="booking-card next-up shadow-glow">
+                    <div class="card-id">#03</div>
+                    <div class="card-info">
+                        <h4 class="customer-name">محمد أحمد(أنت الآن)</h4>
+                        <span class="customer-phone">01012548952</span>
+                    </div>
+                    <div class="card-status">
+                        <span class="badge-status blink">جاري التنفيذ</span>
+                    </div>
+                </div>
+
+                <div class="booking-card next-up shadow-glow">
+                    <div class="card-id">#04</div>
+                    <div class="card-info">
+                        <h4 class="customer-name">علي حسن</h4>
+                        <span class="customer-phone">01244556677</span>
+                    </div>
+                    <div class="card-status">
+                        <span class="badge-status blink">قادم قريباً</span>
+                    </div>
+                </div>
+
+                <div class="booking-card next-up shadow-glow">
+                    <div class="card-id">#05</div>
+                    <div class="card-info">
+                        <h4 class="customer-name">عمر فاروق</h4>
+                        <span class="customer-phone">01566778899</span>
+                    </div>
+                    <div class="card-status">
+                        <span class="badge-status blink">قادم قريباً</span>
+                    </div>
+                </div>
+
+                <div class="booking-card next-up shadow-glow">
+                    <div class="card-id">#06</div>
+                    <div class="card-info">
+                        <h4 class="customer-name">كريم يوسف</h4>
+                        <span class="customer-phone">01199001122</span>
+                    </div>
+                    <div class="card-status">
+                        <span class="badge-status blink">قادم قريباً</span>
+                    </div>
+                </div>
+
+                <div class="booking-card next-up shadow-glow">
+                    <div class="card-id">#07</div>
+                    <div class="card-info">
+                        <h4 class="customer-name">يوسف إيهاب</h4>
+                        <span class="customer-phone">01055664433</span>
+                    </div>
+                    <div class="card-status">
+                        <span class="badge-status blink">قادم قريباً</span>
+                    </div>
+                </div>
+
+                <!-- ثالثاً: المواعيد العادية - لسه بدري (3 عملاء) -->
+                <div class="booking-card">
+                    <div class="card-id">#08</div>
+                    <div class="card-info">
+                        <h4 class="customer-name">أحمد خالد</h4>
+                        <span class="customer-phone">01234567890</span>
+                    </div>
+                    <div class="card-status">
+                        <span class="badge-status gray">انتظار</span>
+                    </div>
+                </div>
+
+                <div class="booking-card">
+                    <div class="card-id">#09</div>
+                    <div class="card-info">
+                        <h4 class="customer-name">مصطفى سعيد</h4>
+                        <span class="customer-phone">01044332211</span>
+                    </div>
+                    <div class="card-status">
+                        <span class="badge-status gray">انتظار</span>
+                    </div>
+                </div>
+
+                <div class="booking-card">
+                    <div class="card-id">#10</div>
+                    <div class="card-info">
+                        <h4 class="customer-name">سعد الدين</h4>
+                        <span class="customer-phone">01188776655</span>
+                    </div>
+                    <div class="card-status">
+                        <span class="badge-status gray">انتظار</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="container text-end mt-5 mb-5 vision-section">
+        <div class="row g-4">
+            
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="box p-5">
+                    <h2>هدفنا</h2>
+                    <p>
+                        تقديم تجربة حلاقة متكاملة تعتمد على الدقة والتنظيم، مع تقليل وقت الانتظار
+                        وتوفير خدمة راقية تليق بثقة عملائنا
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="box p-5">
+                    <h2>حولنا</h2>
+                    <p>
+                        نحن منصة ذكية لإدارة وتنظيم الحجوزات داخل صالونات الحلاقة،
+                        نهدف إلى تحسين تجربة العميل وتسهيل إدارة الوقت باحترافية
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="box p-5">
+                    <h2>رؤيتنا</h2>
+                    <p>
+                        أن نكون الوجهة الأولى للعناية الرجالية، من خلال تقديم خدمات
+                        احترافية تجمع بين الأناقة، الجودة، والتنظيم
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact-section mt-5 mb-5">
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- تواصل معنا -->
+                <div class="col-12 col-md-6">
+                    <div class="contactUs box p-4 text-end">
+                        <h2>تواصل معنا</h2>
+                        <p>نحن هنا لخدمتك. احجز موعدك أو تواصل معنا للاستفسار عن خدماتنا.</p>
+
+                        <div class="info">
+                            <p><i class="fa-solid fa-phone"></i> 01012548952</p>
+                            <p><i class="fa-solid fa-location-dot"></i> أرض المحلج - العياط - الجيزة</p>
+                            <p><i class="fa-solid fa-clock"></i> يوميًا من 10 صباحًا حتى 12 مساءً</p>
+                        </div>
+
+                        <div class="social mt-3">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الموقع -->
+                <div class="col-12 col-md-6">
+                    <div class="location box p-1" id="location">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d748.5375438208366!2d31.261407730449122!3d29.622958164264737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjnCsDM3JzIyLjciTiAzMcKwMTUnMzguOCJF!5e1!3m2!1sar!2seg!4v1777557998369!5m2!1sar!2seg"
+                            width="100%" height="100%" 
+                            style="border:0; border-radius: 2px;" 
+                            allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="modern-footer">
+        <div class="footer-wrap">
+            <!-- الجزء العلوي: الهوية والبصمة -->
+            <div class="brand-section text-center mb-4">
+                <div class="logo-box">
+                    <img src="/Image/main-logo.png" alt="Ibrahim Cheetos" class="main-logo mb-4">
+                </div>
+                <h2 class="tagline">دقة في الأداء.. فن في الحلاقة. نحن هنا لنجعلك في أفضل مظهر دائماً.</h2>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- الجزء السفلي: المعلومات الأساسية في سطر واحد -->
+            <div class="info-bar">
+                <div class="info-item">
+                    <span class="label">العنوان</span>
+                    <span class="value">أرض المحلج - العياط - الجيزة</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">اتصل بنا</span>
+                    <span class="value">01012548952</span>
+                </div>
+                <div class="info-item links-flex">
+                    <a href="#">حجز موعد</a>
+                    <a href="#">جدول الحجوزات</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../Script/js/all.min.js"></script>
+    <script src="../Script/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
