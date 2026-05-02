@@ -406,7 +406,7 @@ body{
 @media (max-width: 420px) {
     .slide .carousel-inner img{
     /* width: 100%; */
-    height: calc(100vh - 65.66px);
+    height: calc(85vh);
 }
 
     .navbar .container-fluid img{
