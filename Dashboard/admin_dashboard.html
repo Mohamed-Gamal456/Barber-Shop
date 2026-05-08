@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إبراهيم شيتوس | لوحة العمليات</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Readex+Pro:wght@160..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Style/css/all.min.css">
+    <link rel="stylesheet" href="../Style/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Style/admin_style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-dark sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <img src="../Image/main-logo.png" alt="logo" width="120">
+            </div>
+            
+            <div class="nav-pill">
+                <a href="admin_dashboard.html" class="nav-link-custom active">العمليات</a>
+                <a href="admin_settings.html" class="nav-link-custom">الإعدادات</a>
+            </div>
+
+            <div class="live-status">
+                <span class="dot"></span> مباشر
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row g-3 mb-4 text-center">
+            <div class="col-md-4">
+                <div class="stat-card">
+                    <span class="stat-label">تمت الخدمة</span>
+                    <h2 class="stat-value text-success">5</h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-card">
+                    <span class="stat-label">في الانتظار</span>
+                    <h2 class="stat-value text-warning">12</h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-card">
+                    <span class="stat-label">إجمالي اليوم</span>
+                    <h2 class="stat-value text-light">17</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-container shadow-lg">
+            <h4 class="table-title p-3 mb-0"><i class="fa-solid fa-list-ol ms-2"></i> طابور العشرة الأوائل</h4>
+            <div class="table-responsive">
+                <table class="table table-dark table-hover align-middle mb-0">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>الاسم</th>
+                            <th>الموبايل</th>
+                            <th>الحالة</th>
+                            <th>إجراء</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="current-row shadow-glow">
+                            <td><span class="id-badge bg-gold">1</span></td>
+                            <td><strong>محمد أحمد</strong></td>
+                            <td>01012548952</td>
+                            <td><span class="badge bg-gold-transparent blink">جاري الآن</span></td>
+                            <td><button class="btn btn-gold btn-sm px-4 fw-bold">NEXT</button></td>
+                        </tr>
+
+                        <tr class="next-soon-row">
+                            <td><span class="id-badge">2</span></td>
+                            <td>علي حسن</td>
+                            <td>01224455667</td>
+                            <td><span class="text-warning">قريباً</span></td>
+                            <td><button class="btn btn-outline-light btn-xs"><i class="fa-solid fa-pen"></i></button></td>
+                        </tr>
+                        <tr class="next-soon-row">
+                            <td><span class="id-badge">3</span></td>
+                            <td>عمر فاروق</td>
+                            <td>01556677889</td>
+                            <td><span class="text-warning">قريباً</span></td>
+                            <td><button class="btn btn-outline-light btn-xs"><i class="fa-solid fa-pen"></i></button></td>
+                        </tr>
+
+                        <tr class="waiting-row">
+                            <td><span class="id-badge gray">6</span></td>
+                            <td>أحمد خالد</td>
+                            <td>01234567890</td>
+                            <td><span class="text-secondary">انتظار</span></td>
+                            <td><button class="btn btn-outline-danger btn-xs"><i class="fa-solid fa-trash"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="weekly-load mt-5">
+            <h5 class="text-light mb-3">ضغط الحجوزات الأسبوعي</h5>
+            <div class="d-flex gap-3 overflow-auto pb-3">
+                <div class="day-card"><span>السبت</span> <strong>10</strong></div>
+                <div class="day-card active"><span>الأحد</span> <strong>20</strong></div>
+                <div class="day-card"><span>الاثنين</span> <strong>5</strong></div>
+                <div class="day-card"><span>الثلاثاء</span> <strong>12</strong></div>
+                <div class="day-card"><span>الأربعاء</span> <strong>18</strong></div>
+                <div class="day-card"><span>الخميس</span> <strong>15</strong></div>
+                <div class="day-card"><span>الجمعة</span> <strong>0</strong></div>
+            </div>
+        </div>
+    </div>
+    <script src="../Script/js/all.min.js"></script>
+    <script src="../Script/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

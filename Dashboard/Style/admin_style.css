@@ -1,0 +1,148 @@
+:root {
+    --gold-color: #D4AF37;
+    --dark-bg: #000;
+    --card-bg: #111;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: #fff;
+    font-family: 'Alexandria', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+}
+
+.nav-pill {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 5px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-link-custom {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 25px;
+    border-radius: 40px;
+    display: inline-block;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.nav-link-custom.active {
+    background: var(--gold-color);
+    color: #000 !important;
+    font-weight: bold;
+}
+
+/* Stats */
+.stat-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #222;
+}
+
+.stat-label { color: #888; font-size: 13px;}
+.stat-value { margin: 12px 0 0 0; font-weight: bold; }
+
+/* Table Section */
+.table-container {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #222;
+}
+
+.table-title { border-bottom: 1px solid #222; font-size: 18px; }
+
+.table thead th {
+    background: #0a0a0a;
+    color: var(--gold-color);
+    border: none;
+    padding: 15px;
+}
+
+.table td { padding: 15px; border-bottom: 1px solid #1a1a1a; }
+
+/* Current Row Style */
+.current-row { background: rgba(212, 172, 55, 0.05) !important; }
+.bg-gold { background: var(--gold-color); color: #000; }
+.id-badge {
+    width: 30px; height: 30px; display: inline-flex;
+    align-items: center; justify-content: center; border-radius: 50%;
+    font-weight: bold; background: #222;
+}
+
+.btn-gold { background: var(--gold-color); border: none; transition: 0.3s; }
+.btn-gold:hover { background: #b8962d; transform: scale(1.05); }
+
+/* Weekly Cards */
+.day-card {
+    min-width: 100px; background: var(--card-bg);
+    padding: 15px; border-radius: 12px; text-align: center;
+    border: 1px solid #222;
+}
+.day-card.active { border-color: var(--gold-color); background: rgba(212, 172, 55, 0.1); }
+.day-card span { display: block; font-size: 12px; color: #777; }
+
+/* Status Badge Blink */
+.blink { animation: blinker 1.5s linear infinite; }
+@keyframes blinker { 50% { opacity: 0.5; } }
+
+
+
+
+/*-----------------------------------الإعدادات------------------------------------------*/
+/* المنتهي (Finished) */
+.row-finished {
+    opacity: 0.6 !important;
+    /* text-decoration: line-through; */
+    filter: grayscale(1);
+}
+
+/* الخمسة الذهبيين - رقم 1 */
+.current-row {
+    border-right: 5px solid var(--gold-color) !important;
+    background: rgba(212, 175, 55, 0.08) !important;
+}
+
+.pulse-gold {
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+    animation: pulse-border 2s infinite;
+}
+
+@keyframes pulse-border {
+    70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+/* الخمسة الذهبيين - استعداد */
+.next-soon-row {
+    border-right: 3px solid var(--gold-color) !important;
+}
+
+.border-gold { border: 1px solid var(--gold-color) !important; }
+
+/* اليوم المباشر (LIVE) */
+.active-live {
+    border-color: #28a745 !important;
+    background: rgba(40, 167, 69, 0.1) !important;
+    position: relative;
+}
+
+.live-pulse {
+    width: 8px; height: 8px; background: #28a745;
+    border-radius: 50%; position: absolute; top: 10px; right: 10px;
+    animation: blinker 1s linear infinite;
+}
+
+.border-gold-top { border-top: 3px solid var(--gold-color) !important; }
+
+/* أزرار الإجراءات الصغيرة */
+.btn-xs { padding: 2px 8px; font-size: 12px; }
